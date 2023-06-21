@@ -28,31 +28,31 @@ public class DistributeurDeBoissons {
             System.out.println("Quelle boisson voulez vous? 1.Cola - 2.Eau plate - 3.Eau gazeuse");
             choixUtilisateur = sc.nextLine();
 
+            Boisson lElue = null;
+
             switch (choixUtilisateur){
                 case "1":
-                    if(maBoisson.quantite>0){
-                        System.out.println("Voici un "+ maBoisson.nom);
-                        System.out.println("Quantité restante: "+ (--maBoisson.quantite));;
-                    } else
-                        System.out.println("Nous n'avons plus de "+ maBoisson.nom);
+                    lElue = maBoisson;
                     break;
+
                 case "2":
-                    if(maBoisson2.quantite>0){
-                        System.out.println("Voici un "+maBoisson2.nom);
-                        System.out.println("Quantité restante: "+ (--maBoisson2.quantite));;
-                    } else
-                        System.out.println("Nous n'avons plus de "+maBoisson2.nom);
+                    lElue = maBoisson2;
                     break;
+
                 case "3":
-                    if(maBoisson3.quantite>0){
-                        System.out.println("Voici un "+maBoisson3.nom);
-                        System.out.println("Quantité restante: "+ (--maBoisson3.quantite));;
-                    } else
-                        System.out.println("Nous n'avons plus de "+maBoisson3.nom);
+                    lElue = maBoisson3;
                     break;
+
                 default:
-                    System.out.println("Boisson non connue");
+                    lElue = null;
             }
+
+            if(lElue.quantite>0){
+                System.out.println("Voici un "+ lElue.nom);
+                System.out.println("Quantité restante: "+ (--lElue.quantite));;
+            } else
+                System.out.println("Nous n'avons plus de "+lElue.nom);
+
 
             do {
                 System.out.println("Voulez-vous une autre boisson? Oui (O), non (N)");
