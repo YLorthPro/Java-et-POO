@@ -1,8 +1,16 @@
 import java.util.Scanner;
 
 public class DistributeurDeBoissons {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        Boisson maBoisson =new Boisson();
+        maBoisson.nom="cola";
+        maBoisson.quantite=3;
+
+        System.out.println(maBoisson);
+
 
         String choixUtilisateur;
         String autreChoix;
