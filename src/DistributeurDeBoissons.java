@@ -73,7 +73,7 @@ public class DistributeurDeBoissons {
 
         }while (repeat && (maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite >0));
 
-        // Si toutes les boissons sont épuisées, on affiche un message à l'utilisateur
+
         if(maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite==0)
             System.out.println("Plus de boissons disponibles");
 
