@@ -1,3 +1,9 @@
+package distriBoisson;
+
+import distriBoisson.Boisson;
+import todo.Tache;
+
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class DistributeurDeBoissons {
@@ -6,18 +12,12 @@ public class DistributeurDeBoissons {
         // On importe la classe Scanner pour pouvoir lire les entrées
         Scanner sc = new Scanner(System.in);
 
-        // On crée 3 objets de la classe Boisson avec des noms et des quantités différentes
-        Boisson maBoisson = new Boisson();
-        maBoisson.nom="cola";
-        maBoisson.quantite=3;
+        //On crée 3 objets de la classe distriBoisson.Boisson avec des noms et des quantités différentes
+        Boisson maBoisson = new Boisson("cola",3);
 
-        Boisson maBoisson2 = new Boisson();
-        maBoisson2.nom="Eau plate";
-        maBoisson2.quantite=2;
+        Boisson maBoisson2 = new Boisson("Eau plate",2);
 
-        Boisson maBoisson3 = new Boisson();
-        maBoisson3.nom="Eau gazeuse";
-        maBoisson3.quantite=5;
+        Boisson maBoisson3 = new Boisson("Eau gazeuse",5);
 
         // On initialise des variables pour stocker les choix de l'utilisateur
         String choixUtilisateur;
@@ -55,8 +55,7 @@ public class DistributeurDeBoissons {
             // On vérifie si la quantité de la boisson est supérieure à 0 pour la servir à l'utilisateur
 
             if(lElue.quantite>0){
-                System.out.println("Voici un "+ lElue.nom);
-                System.out.println("Quantité restante: "+ (--lElue.quantite));;
+                lElue.affichage();
             } else
                 System.out.println("Nous n'avons plus de "+lElue.nom);
 
@@ -73,11 +72,10 @@ public class DistributeurDeBoissons {
 
         }while (repeat && (maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite >0));
 
-
         if(maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite==0)
             System.out.println("Plus de boissons disponibles");
 
         System.out.println("Au revoir!");
-
     }
+
 }
