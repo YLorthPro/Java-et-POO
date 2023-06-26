@@ -1,9 +1,5 @@
 package distriBoisson;
 
-import distriBoisson.Boisson;
-import todo.Tache;
-
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class DistributeurDeBoissons {
@@ -32,6 +28,8 @@ public class DistributeurDeBoissons {
             System.out.println("Quelle boisson voulez vous? 1.Cola - 2.Eau plate - 3.Eau gazeuse");
             choixUtilisateur = sc.nextLine();
 
+            System.out.println(maBoisson.getListeIngredient());
+
             // On utilise l'instruction switch pour récupérer la boisson choisie par l'utilisateur
             Boisson lElue = null;
 
@@ -54,10 +52,10 @@ public class DistributeurDeBoissons {
 
             // On vérifie si la quantité de la boisson est supérieure à 0 pour la servir à l'utilisateur
 
-            if(lElue.quantite>0){
+            if(lElue.getQuantite()>0){
                 lElue.affichage();
             } else
-                System.out.println("Nous n'avons plus de "+lElue.nom);
+                System.out.println("Nous n'avons plus de "+lElue.getNom());
 
             // On utilise une autre boucle do-while pour demander à l'utilisateur s'il souhaite commander une autre boisson
             do {
@@ -70,9 +68,9 @@ public class DistributeurDeBoissons {
                     repeat=false;
             }while(!autreChoix.toLowerCase().equals("o") && !autreChoix.toLowerCase().equals("n"));
 
-        }while (repeat && (maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite >0));
+        }while (repeat && (maBoisson.getQuantite() + maBoisson2.getQuantite()+ maBoisson3.getQuantite() >0));
 
-        if(maBoisson.quantite + maBoisson2.quantite+ maBoisson3.quantite==0)
+        if(maBoisson.getQuantite() + maBoisson2.getQuantite()+ maBoisson3.getQuantite()==0)
             System.out.println("Plus de boissons disponibles");
 
         System.out.println("Au revoir!");
