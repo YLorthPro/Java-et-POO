@@ -1,4 +1,4 @@
-package heritage.etresVivants.marin.terrestre;
+package heritage.etresVivants.terrestre;
 
 import heritage.etresVivants.marin.EtreVivants;
 

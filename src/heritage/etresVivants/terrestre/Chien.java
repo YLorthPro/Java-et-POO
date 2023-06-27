@@ -1,4 +1,4 @@
-package heritage.etresVivants.marin.terrestre;
+package heritage.etresVivants.terrestre;
 
 public class Chien extends Terrestre {
     private String nom;
