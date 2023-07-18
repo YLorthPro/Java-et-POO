@@ -3,7 +3,8 @@ package geometrie;
 public class Carre extends Forme2D implements Affichable{
     private double cote;
 
-    public Carre(double cote) {
+    public Carre(double cote, String couleur) {
+        super(couleur);
         this.cote = cote;
     }
 
@@ -22,5 +23,6 @@ public class Carre extends Forme2D implements Affichable{
         System.out.println("Carré - Côté : " + cote);
         System.out.println("Aire : " + calculerAire());
         System.out.println("Périmètre : " + calculerPerimetre());
+        System.out.println("Couleur : " + getColor());
     }
 }

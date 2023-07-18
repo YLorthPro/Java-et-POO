@@ -1,9 +1,10 @@
 package heroesVSmonsters.personnages.monstres;
 
-import heroesVSmonsters.utils.Des;
+import heroesVSmonsters.ILootGold;
+import heroesVSmonsters.ILootLeather;
 import heroesVSmonsters.utils.Tools;
 
-public class Dragonnet extends Monstre {
+public class Dragonnet extends Monstre implements ILootGold, ILootLeather {
 
     //1.Variables
 
@@ -14,4 +15,13 @@ public class Dragonnet extends Monstre {
     }
 
 
+    @Override
+    public int getOr() {
+        return this.getOr();
+    }
+
+    @Override
+    public int getCuir() {
+        return this.getCuir();
+    }
 }

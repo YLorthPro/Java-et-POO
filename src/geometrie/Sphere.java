@@ -3,7 +3,8 @@ package geometrie;
 public class Sphere extends Forme3D implements Affichable {
     private double rayon;
 
-    public Sphere(double rayon) {
+    public Sphere(double rayon, String couleur) {
+        super(couleur);
         this.rayon = rayon;
     }
 
@@ -16,5 +17,6 @@ public class Sphere extends Forme3D implements Affichable {
     public void afficherInfo() {
         System.out.println("Sphère - Rayon : " + rayon);
         System.out.println("Volume : " + calculerVolume());
+        System.out.println("Couleur : " + getColor());
     }
 }

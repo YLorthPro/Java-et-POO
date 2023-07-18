@@ -3,7 +3,8 @@ package geometrie;
 public class Cercle extends Forme2D implements Affichable{
     private double rayon;
 
-    public Cercle(double rayon) {
+    public Cercle(double rayon, String couleur) {
+        super(couleur);
         this.rayon = rayon;
     }
 
@@ -22,6 +23,7 @@ public class Cercle extends Forme2D implements Affichable{
         System.out.println("Cercle - Rayon : " + rayon);
         System.out.println("Aire : " + calculerAire());
         System.out.println("Périmètre : " + calculerPerimetre());
+        System.out.println("Couleur : " + getColor());
     }
 }
 

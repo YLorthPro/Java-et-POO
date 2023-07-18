@@ -1,5 +1,7 @@
 package heroesVSmonsters.personnages.heros;
 
+import heroesVSmonsters.ILootGold;
+import heroesVSmonsters.ILootLeather;
 import heroesVSmonsters.personnages.Personnage;
 
 public abstract class Hero extends Personnage {
@@ -22,10 +24,16 @@ public abstract class Hero extends Personnage {
     public void frappe(Personnage ennemi) {
         super.frappe(ennemi);
         if (ennemi.getPointDeVieActuel()<=0){
-            this.setOr(ennemi.getOr());
-            ennemi.setOr(-ennemi.getOr());
-            this.setCuir(ennemi.getCuir());
-            ennemi.setCuir(-ennemi.getCuir());
+            if(ennemi instanceof ILootGold){
+                this.setOr(ennemi.getOr());
+                ennemi.setOr(-ennemi.getOr());
+            }
+
+            if(ennemi instanceof ILootLeather){
+                this.setCuir(ennemi.getCuir());
+                ennemi.setCuir(-ennemi.getCuir());
+            }
+
             this.setPointDeVieActuel(this.getPointDeVie());
 
         }
