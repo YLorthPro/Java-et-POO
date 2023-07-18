@@ -1,4 +1,4 @@
-package heritage.etresVivants.marin;
+package heritage.etresVivants;
 
 public class EtreVivants {
 

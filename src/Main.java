@@ -11,7 +11,5 @@ public class Main {
         Poisson poisson = new Poisson(5);
         Baleine baleine = new Baleine(3,1234.56);
 
-
-
     }
 }

@@ -1,6 +1,6 @@
 package heritage.etresVivants.terrestre;
 
-import heritage.etresVivants.marin.EtreVivants;
+import heritage.etresVivants.EtreVivants;
 
 public class Terrestre extends EtreVivants {
     private boolean marche;

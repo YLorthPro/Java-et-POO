@@ -1,6 +1,8 @@
 package heritage.etresVivants.marin;
 
-public class Baleine extends Marin {
+import heritage.etresVivants.Mammifere;
+
+public class Baleine extends Marin implements Mammifere {
     private double poids;
 
     public double getPoids() {
@@ -15,5 +17,15 @@ public class Baleine extends Marin {
     public Baleine(int nbNageoire, double poids) {
         super(nbNageoire);
         this.poids = poids;
+    }
+
+    @Override
+    public void accoucher() {
+        System.out.println("Coucou");
+    }
+
+    @Override
+    public void allaiter() {
+		setPoids(25);
     }
 }

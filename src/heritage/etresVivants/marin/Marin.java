@@ -1,5 +1,7 @@
 package heritage.etresVivants.marin;
 
+import heritage.etresVivants.EtreVivants;
+
 class Marin extends EtreVivants {
 
     private int nbNageoire;

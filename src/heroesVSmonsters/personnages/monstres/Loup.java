@@ -1,6 +1,5 @@
 package heroesVSmonsters.personnages.monstres;
 
-import heroesVSmonsters.utils.Des;
 import heroesVSmonsters.utils.Tools;
 
 public class Loup extends Monstre {
