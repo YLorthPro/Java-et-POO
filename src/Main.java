@@ -11,5 +11,17 @@ public class Main {
         Poisson poisson = new Poisson(5);
         Baleine baleine = new Baleine(3,1234.56);
 
+        try{
+            int nb = 8;
+            System.out.println("Entrez un chiffre entre 0 et 6 inclus");
+            if(nb < 0 || nb >6)
+                throw new GeoffreyException("Oui mais....");
+
+            System.out.println("coucou");
+        }catch(GeoffreyException ex){
+            System.out.println(ex);
+        }
     }
+
+
 }
