@@ -4,6 +4,7 @@ public class CollectionLambda <T>{
     private T[] array;
     private int size;
 
+
     public CollectionLambda(int size){
         array = (T[]) new Object[size];
     }
