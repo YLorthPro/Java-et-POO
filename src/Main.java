@@ -1,3 +1,4 @@
+import exception.GeoffreyException;
 import heritage.etresVivants.marin.Baleine;
 import heritage.etresVivants.marin.Poisson;
 import heritage.etresVivants.terrestre.Chien;

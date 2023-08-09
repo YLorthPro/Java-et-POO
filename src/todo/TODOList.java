@@ -5,13 +5,15 @@ import todo.Tache;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TODOList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ArrayList toDoList = new ArrayList<>();
+        LinkedList<Tache> toDoList = new LinkedList<>();
 
         String reponseUtilisateur;
         String reponseUtilisateur2;

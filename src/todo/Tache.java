@@ -1,6 +1,7 @@
 package todo;
 
 import java.time.LocalDate;
+
 public class Tache {
     protected String nom;
     public LocalDate date;
@@ -11,6 +12,7 @@ public class Tache {
         this.date = date;
         this.description = description;
     }
+
 
     public void affichage(){
         System.out.println("Je suis une tache");

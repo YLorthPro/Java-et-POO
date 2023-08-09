@@ -25,4 +25,8 @@ public class Carre extends Forme2D implements Affichable{
         System.out.println("Périmètre : " + calculerPerimetre());
         System.out.println("Couleur : " + getColor());
     }
+
+    public void test(){
+        System.out.println("Je suis un carré");
+    }
 }
