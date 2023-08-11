@@ -12,19 +12,29 @@ public class Stream {
 
 
         //Carré
-        Arrays.stream(tab).map(e->e*e).forEach(System.out::println);
-
+        System.out.println("Carrés:");
+        Arrays.stream(tab).map(e->e*e).forEach(System.out::print);
+        System.out.println();
         //Positif
-        Arrays.stream(tab).filter(e->e>0).forEach(System.out::println);
+        System.out.println("Positifs:");
+        Arrays.stream(tab).filter(e->e>0).forEach(System.out::print);
+        System.out.println();
         //Negatif
-        Arrays.stream(tab).filter(e->e<0).forEach(System.out::println);
+        System.out.println("Négatifs:");
+        Arrays.stream(tab).filter(e->e<0).forEach(System.out::print);
+        System.out.println();
         //Pair
-        Arrays.stream(tab).filter(e->e%2==0).forEach(System.out::println);
+        System.out.println("Pairs:");
+        Arrays.stream(tab).filter(e->e%2==0).forEach(System.out::print);
+        System.out.println();
         //Impair
-        Arrays.stream(tab).filter(e->e%2!=0).forEach(System.out::println);
+        System.out.println("Impairs:");
+        Arrays.stream(tab).filter(e->e%2!=0).forEach(System.out::print);
+        System.out.println();
         //Double
-        Arrays.stream(tab).map(e->e*2).forEach(System.out::println);
-
+        System.out.println("Double:");
+        Arrays.stream(tab).map(e->e*2).forEach(System.out::print);
+        System.out.println();
 
 
         // Manipulation de liste vs stream
