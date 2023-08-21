@@ -7,6 +7,7 @@ import parking.Carburant;
 import parking.Vehicule;
 import parking.Voiture;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +31,11 @@ public class Main {
 
         //ASCII
 
+        Optional<Voiture> opt = Optional.of(new Voiture("peu","308",Carburant.ESSENCE));
 
+        opt = Optional.empty();
+
+        System.out.println(opt.isPresent());
 
     }
 

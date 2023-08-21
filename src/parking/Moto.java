@@ -12,4 +12,5 @@ public class Moto extends Vehicule{
     public Carburant getCarburant() {
         return carburant;
     }
+
 }
