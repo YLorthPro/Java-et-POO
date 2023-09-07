@@ -1,4 +1,8 @@
 import exception.GeoffreyException;
+import gestionDechets.Inventaire;
+import gestionDechets.Produit;
+import gestionDechets.ProduitFrigo;
+import gestionDechets.Stock;
 import heritage.etresVivants.marin.Baleine;
 import heritage.etresVivants.marin.Poisson;
 import heritage.etresVivants.terrestre.Chien;
@@ -7,6 +11,7 @@ import parking.Carburant;
 import parking.Vehicule;
 import parking.Voiture;
 
+import java.util.HashMap;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -20,23 +25,22 @@ public class Main {
 
         try{
             int nb = 8;
-            System.out.println("Entrez un chiffre entre 0 et 6 inclus");
             if(nb < 0 || nb >6)
                 throw new GeoffreyException("Oui mais....");
 
-            System.out.println("coucou");
+            System.out.println("fin try");
         }catch(GeoffreyException ex){
             System.out.println(ex);
         }
 
-        //ASCII
-
-        Optional<Voiture> opt = Optional.of(new Voiture("peu","308",Carburant.ESSENCE));
-
-        opt = Optional.empty();
-
-        System.out.println(opt.isPresent());
-
     }
+
+
+
+
+
+
+
+
 
 }
